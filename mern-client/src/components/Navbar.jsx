@@ -21,12 +21,14 @@ const Navbar = () => {
       } else {
         setIsSticky(false);
       }
+    };
 
-      window.addEventListener("scroll", handleScroll);
+    // Thêm trình nghe sự kiện vào cửa sổ
+    window.addEventListener("scroll", handleScroll);
 
-      return () => {
-        window.addEventListener("scroll", handleScroll);
-      };
+    // Gỡ bỏ trình nghe sự kiện khi thành phần bị hủy
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -54,10 +56,10 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300">
+    <header className="w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300 z-10">
       <nav
         className={`py-4 lg:px-24 px-4 flex items-center ${
-          isSticky ? "sticky top-0 left-0 right-0 bg-blue-300" : ""
+          isSticky ? "sticky top-0 left-0 right-0 bg-blue-200" : ""
         }`}
       >
         <div className="w-full flex justify-between items-center text-base gap-8">

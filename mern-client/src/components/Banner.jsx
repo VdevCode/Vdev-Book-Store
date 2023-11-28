@@ -20,13 +20,13 @@ const Banner = () => {
               className="text-sm font-light p-2 outline-none "
             />
             <button className="text-sm font-light p-2 outline-none bg-black hover:bg-blue-400 transition-all ease-in duration-200 text-white">
-              Tìm
+              Tìm sách
             </button>
           </div>
         </div>
         {/* right */}
         <div className="">
-            <BannerCard />
+        <BannerCard></BannerCard>
         </div>
       </div>
     </div>
