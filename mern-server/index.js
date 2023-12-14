@@ -70,13 +70,39 @@ async function run() {
 
 
     //delete book
-    app.delete(("/book/:id", async(req,res) => {
-      const id = req.params.id
-      const filter = {_id: new ObjectId(id)}
-      const result = await bookCollection.deleteOne(filter)
-      res.send(result)
+    const { ObjectId } = require('mongodb');
 
-    }))
+    // ...
+    
+    // Xóa sách
+    app.delete("/book/:id", async (req, res) => {
+      try {
+        const id = req.params.id;
+        const filter = { _id: new ObjectId(id) };
+    
+        // Kiểm tra xem sách có tồn tại không trước khi xóa
+        const existingBook = await bookCollection.findOne(filter);
+        if (!existingBook) {
+          return res.status(404).json({ error: "Sách không tồn tại" });
+        }
+    
+        const result = await bookCollection.deleteOne(filter);
+    
+        if (result.deletedCount === 1) {
+          // Xóa thành công
+          res.json({ message: "Xoá sách thành công" });
+        } else {
+          // Sách không được xóa, có thể do sách không tồn tại
+          res.status(404).json({ error: "Sách không tồn tại hoặc đã bị xóa trước đó" });
+        }
+      } catch (error) {
+        console.error('Lỗi khi xóa sách:', error);
+        res.status(500).json({ error: "Đã xảy ra lỗi khi xóa sách" });
+      }
+    });
+    
+    // ...
+    
 
 
     // find by category
