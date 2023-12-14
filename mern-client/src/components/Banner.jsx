@@ -17,7 +17,7 @@ const Banner = () => {
             <input
               type="text"
               placeholder="Tìm kiếm sách..."
-              className="text-sm font-light p-2 outline-none "
+              className="text-sm font-light p-2 outline-none w-[50%]"
             />
             <button className="text-sm font-light p-2 outline-none bg-black hover:bg-blue-400 transition-all ease-in duration-200 text-white">
               Tìm sách
