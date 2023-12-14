@@ -8,6 +8,12 @@ import {
   Textarea,
 } from "flowbite-react";
 
+import { MdDriveFileRenameOutline } from "react-icons/md";
+import { TbBrandOauth } from "react-icons/tb";
+import { MdAddLink } from "react-icons/md";
+import { BiCategory } from "react-icons/bi";
+import { TbFileDescription } from "react-icons/tb";
+
 const UploadBook = () => {
 
   const bookCategories = ["Truyện tranh", "Truyện cười", "Truyện kinh dị"];
@@ -44,10 +50,12 @@ const UploadBook = () => {
           body: JSON.stringify(bookObject)
       })
       .then((res) => res.json() )
-      .then((data) => alert("Đăng tải sách thành công!"))
+      .then((data) => {
+        alert("Đăng tải sách thành công!"),
+        form.reset()
+      })
     }
 
-    form.reset()
   }
 
 
@@ -68,6 +76,7 @@ const UploadBook = () => {
               type="text"
               name="bookTitle"
               placeholder="Ví dụ: Doraemon"
+              icon={MdDriveFileRenameOutline}
               required
             />
           </div>
@@ -78,6 +87,7 @@ const UploadBook = () => {
             <TextInput
               id="authorName"
               type="text"
+              icon={TbBrandOauth}
               name="authorName"
               placeholder="Ví dụ: Kakashi"
               required
@@ -95,6 +105,7 @@ const UploadBook = () => {
               id="imageURL"
               type="text"
               name="imageURL"
+              icon={MdAddLink}
               placeholder="Ví dụ: http://localhost:5173/src/assets/avatar/avatar1.jpg"
               required
             />
@@ -109,6 +120,7 @@ const UploadBook = () => {
               name="categoryName"
               className=" rounded block w-full"
               value={selectedBook}
+              icon={BiCategory}
             >
               {bookCategories.map((option, index) => (
                 <option key={index}>{option}</option>
@@ -129,7 +141,8 @@ const UploadBook = () => {
               name="bookDescription"
               placeholder="Ví dụ: Truyện Doraemon mô tả về tình bạn 5 người..."
               required
-              rows={5}
+              rows={6}
+              
             />
           </div>
         </div>
@@ -145,6 +158,7 @@ const UploadBook = () => {
               type="text"
               name="bookPDFURL"
               placeholder="Ví dụ: Đường dẫn file PDF"
+              icon={TbFileDescription}
               // required
             />
           </div>

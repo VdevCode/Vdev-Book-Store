@@ -11,13 +11,13 @@ import { CiUser } from "react-icons/ci";
 import { IoExitOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { CiGrid41 } from "react-icons/ci";
+import { GiShoppingBag } from "react-icons/gi";
 const SideBar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isSticky, setIsSticky] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log("success");
   };
 
   useEffect(() => {
@@ -88,6 +88,11 @@ const SideBar = () => {
               <Link to="/admin/dashboard/manage">
                 <Sidebar.Item icon={IoExitOutline}>
                   <p className="text-[.9rem]">Đăng ký</p>
+                </Sidebar.Item>
+              </Link>
+              <Link to="/">
+                <Sidebar.Item icon={GiShoppingBag}>
+                  <p className="text-[.9rem]">Cửa hàng</p>
                 </Sidebar.Item>
               </Link>
             </Sidebar.ItemGroup>
