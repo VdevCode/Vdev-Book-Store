@@ -26,7 +26,7 @@ const Shop = () => {
             imgSrc={books.imageURL}
           >
             <a href="#">
-              <h5 className="text-[.8rem]  font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="text-[.8rem] limit-text font-semibold tracking-tight text-gray-900 dark:text-white">
                 {books.bookTitle}
               </h5>
             </a>
@@ -79,7 +79,7 @@ const Shop = () => {
               <span className="text-[.8rem] lg:text-[1rem] font-semiboild text-gray-900 dark:text-white">
                 12.000vnđ
               </span>
-              <Link to={`/book/${book._id}`} className="rounded-sm bg-red-700 text-center px-2 py-2 text-[.8rem] font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
+              <Link to={`/book/${books._id}`} className="rounded-sm bg-red-700 text-center px-2 py-2 text-[.8rem] font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
                 <IoCartOutline />
               </Link>
             </div>
