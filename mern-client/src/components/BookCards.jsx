@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineShopping } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css/autoplay"
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -25,7 +27,13 @@ const BookCards = ({ headLine, books }) => {
             spaceBetween={10}
             pagination={{
               clickable: true,
-            }}
+         }}
+            
+            loop={true}
+              autoplay={{
+                delay: 1200,
+                disableOnInteraction: false,
+              }}
             breakpoints={{
               640: {
                 slidesPerView: 2,
@@ -40,7 +48,7 @@ const BookCards = ({ headLine, books }) => {
                 spaceBetween: 50,
               },
             }}
-            modules={[Pagination]}
+            modules={[Pagination,Autoplay]}
             className="mySwiper w-full h-full"
           >
             {books.map((book) => (

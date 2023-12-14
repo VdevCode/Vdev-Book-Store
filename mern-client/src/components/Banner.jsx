@@ -6,8 +6,8 @@ const Banner = () => {
       <div className="flex w-full flex-col md:flex-row justify-between items-center gap-12 py-40">
         {/* left */}
         {/* space-x-8  */}
-        <div className="md:w-1/2 h-full">
-          <h2 className="text-4xl font-medium leading-snug text-black">
+        <div className="md:w-1/2 h-full ">
+          <h2 className="text-4xl  font-medium md:text-left lg:text-left sm:text-left text-center leading-snug text-black">
             Mua và bán sách tại <span className="text-red-500">Vdevbook.</span>
           </h2>
           <p className="text-sm font-light my-4 md:w-4/54">
@@ -17,9 +17,9 @@ const Banner = () => {
             <input
               type="text"
               placeholder="Tìm kiếm sách..."
-              className="text-sm font-light p-2 outline-none w-[50%]"
+              className="text-sm font-light p-2 outline-none border-none w-[65%]"
             />
-            <button className="text-sm font-light p-2 outline-none bg-black hover:bg-blue-400 transition-all ease-in duration-200 text-white">
+            <button className="text-sm w-[35%] font-light p-2 outline-none bg-black hover:bg-blue-400 transition-all ease-in duration-200 text-white">
               Tìm sách
             </button>
           </div>
