@@ -53,6 +53,10 @@ const Navbar = () => {
       link: "Blog",
       path: "/blog",
     },
+    {
+      link: "Quản trị",
+      path: "/admin/dashboard",
+    },
   ];
 
   return (
@@ -117,7 +121,7 @@ const Navbar = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className="block text-base text-sm my-2 text-white capitalize cursor-pointer hover:text-red-200"
+                  className="block  text-sm my-2 text-white capitalize cursor-pointer hover:text-red-200"
                 >
                   {link}
                 </Link>

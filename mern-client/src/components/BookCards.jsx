@@ -14,7 +14,6 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 const BookCards = ({ headLine, books }) => {
-  console.log(books);
   return (
     <div>
       <div className="my-16 px-4 lg:px-24">
@@ -27,6 +26,7 @@ const BookCards = ({ headLine, books }) => {
             spaceBetween={10}
             pagination={{
               clickable: true,
+              
          }}
             
             loop={true}
@@ -62,11 +62,11 @@ const BookCards = ({ headLine, books }) => {
                   </div>
                   <div>
                     <div>
-                      <h3>{book.bookTitle}</h3>
+                      <h3 className="limit1-text">{book.bookTitle}</h3>
                       <p>{book.authorName}</p>
                     </div>
                     <div className="">
-                      <p>20.000vnd</p>
+                      {/* <p>20.000vnd</p> */}
                     </div>
                   </div>
                 </Link>
