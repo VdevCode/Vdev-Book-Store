@@ -167,7 +167,7 @@ const EditBook = () => {
           </div>
         </div>
 
-        <Button type="submit">Xác nhận</Button>
+        <Button className="bg-teal-400" type="submit">Xác nhận</Button>
       </form>
     </div>
   );

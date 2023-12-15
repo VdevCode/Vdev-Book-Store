@@ -8,7 +8,7 @@ import Datepicker from './menus/Datepicker';
 import DashboardCard01 from './partials/DashboardCard01';
 import DashboardCard02 from './partials/DashboardCard02';
 // import DashboardCard03 from '../partials/dashboard/DashboardCard03';
-// import DashboardCard04 from '../partials/dashboard/DashboardCard04';
+import DashboardCard04 from './partials/DashboardCard04';
 // import DashboardCard05 from '../partials/dashboard/DashboardCard05';
 // import DashboardCard06 from '../partials/dashboard/DashboardCard06';
 // import DashboardCard07 from '../partials/dashboard/DashboardCard07';
@@ -75,7 +75,7 @@ function Dashboard() {
               {/* Line chart (Acme Professional) */}
               {/* <DashboardCard03 /> */}
               {/* Bar chart (Direct vs Indirect) */}
-              {/* <DashboardCard04 /> */}
+              <DashboardCard04 />
               {/* Line chart (Real Time Value) */}
               {/* <DashboardCard05 /> */}
               {/* Doughnut chart (Top Countries) */}

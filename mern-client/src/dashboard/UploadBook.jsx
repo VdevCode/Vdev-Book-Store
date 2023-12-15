@@ -164,7 +164,7 @@ const UploadBook = () => {
           </div>
         </div>
 
-        <Button type="submit">Đăng sách</Button>
+        <Button className="bg-teal-400" type="submit">Đăng sách</Button>
       </form>
     </div>
   );

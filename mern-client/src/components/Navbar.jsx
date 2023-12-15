@@ -1,14 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 // import { FaBlog } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaXmark } from "react-icons/fa6";
 import { CgMenuGridR } from "react-icons/cg";
 import Logo from "../assets/logo.png"
+import {AuthContext} from "../contexts/AuthProvider.jsx"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isSticky, setIsSticky] = React.useState(false);
+
+  const {user} = useContext(AuthContext)
+
+  console.log(user)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -78,7 +83,7 @@ const Navbar = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className="block text-base text-black uppercase cursor-pointer hover:text-blue-700"
+                  className="block text-[.9rem] text-black capiticalize cursor-pointer hover:text-blue-700"
                 >
                   {link}
                 </Link>
@@ -88,7 +93,9 @@ const Navbar = () => {
 
           <div>
             <button className="space-x-12 hidden lg:flex items-center">
-              <FaBarsStaggered className="w-5 hover:text-blue-700" />
+              {
+                user ? user.email || user.displayName : <FaBarsStaggered className="w-5 hover:text-blue-700" />
+              }
             </button>
           </div>
 
@@ -108,7 +115,7 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`space-y-4 px-4 mt-16 py-2 bg-blue-500 ${
+          className={`space-y-4 px-4 mt-16 py-2 bg-blue-200  ${
             isMenuOpen ? "block top-0 fixed right-0 left-0" : "hidden"
           }`}
         >
@@ -117,7 +124,7 @@ const Navbar = () => {
               <li key={path}>
                 <Link
                   to={path}
-                  className="block  text-sm my-2 text-white capitalize cursor-pointer hover:text-red-200"
+                  className="block  text-sm my-2 text-black capitalize cursor-pointer hover:text-red-500"
                 >
                   {link}
                 </Link>
