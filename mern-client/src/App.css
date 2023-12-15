@@ -19,3 +19,6 @@
             line-clamp: 1; 
     -webkit-box-orient: vertical;
 }
+.h-16{
+    height: 3.5rem;
+}

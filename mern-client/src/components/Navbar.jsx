@@ -46,10 +46,6 @@ const Navbar = () => {
       path: "/shop",
     },
     {
-      link: "Bán sách của bạn",
-      path: "/admin/dashboard",
-    },
-    {
       link: "Blog",
       path: "/blog",
     },

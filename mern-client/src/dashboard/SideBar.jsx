@@ -55,7 +55,7 @@ const SideBar = () => {
           </div>
           <Sidebar.Items>
             <Sidebar.ItemGroup>
-              <Link to="/admin/dashboard/upload">
+              <Link to="/admin/dashboard">
                 <Sidebar.Item icon={TfiDashboard}>
                   <p className="text-[.9rem]">Bảng điều khiển</p>
                 </Sidebar.Item>
