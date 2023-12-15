@@ -13,6 +13,7 @@ import EditBook from "../dashboard/EditBook"
 import SignUp from "../components/SignUp"
 import Login from "../components/Login"
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import PersonalBook from "../dashboard/PersonalBook";
 
 
 const router = createBrowserRouter([
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
         {
           path: "/admin/dashboard/manage",
           element: <ManageBooks/>
+        },
+        {
+          path: "/admin/dashboard/personal",
+          element: <PersonalBook/>
         },
         {
           path: "/admin/dashboard/edit-book/:id",

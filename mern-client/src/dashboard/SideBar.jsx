@@ -57,7 +57,7 @@ const SideBar = () => {
         <Sidebar aria-label="logo" className="border-r-2 border-gray-400">
           <div className="flex items-center justify-between">
             <Link to="/admin/dashboard">
-              <Sidebar.Logo className="rounded" img={user?.photoURL || Logo}>
+              <Sidebar.Logo className="rounded-[50%]" style={{ borderRadius: '50%' }} img={user?.photoURL || Logo}>
                 <p className="text-[.7rem] text-red-500">
                   {user ? (
                     user.email || user.displayName
@@ -91,12 +91,12 @@ const SideBar = () => {
                   <p className="text-[.8rem] sm:text-[.9rem] ">Quản lí sách</p>
                 </Sidebar.Item>
               </Link>
-              <Link to="/admin/dashboard/manage">
+              <Link to="/admin/dashboard/personal">
                 <Sidebar.Item icon={AiOutlineUsergroupAdd}>
                   <p className="text-[.8rem] sm:text-[.9rem]">Người dùng</p>
                 </Sidebar.Item>
               </Link>
-              <Link to="/admin/dashboard/manage">
+              <Link to="/shop">
                 <Sidebar.Item icon={BsCart2}>
                   <p className="text-[.8rem] sm:text-[.9rem]">Xem sản phẩm</p>
                 </Sidebar.Item>

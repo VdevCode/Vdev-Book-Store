@@ -9,7 +9,7 @@ const PrivateRoute = ({children}) => {
   const location = useLocation()
 
   if(loading){
-    return <div className='text-center'>
+    return <div className='text-center mx-auto mt-[50%]'>
       <Button color="gray">
         <Spinner aria-label="Alternate spinner button example" size="sm" />
         <span className="pl-3">Vui lòng chờ giây lát...</span>
